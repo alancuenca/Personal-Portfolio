@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import "./Projects.css";
 import { projects } from "../../constants/constants";
+import "./Projects.css";
 
 function Projects() {
     const [currentProject, setCurrentProject] = useState(0);
@@ -34,8 +34,10 @@ function Projects() {
                     </button>
                     <button className="next-arrow" onClick={nextProject} disabled={currentProject === projects.length - 1}>
                         <IoIosArrowForward />
-                    </button>
-                            <img src={project.image} alt={project.title} />
+                            </button>
+                            <div className="main-img-container">
+                                <img src={project.image} alt={project.title} className="main-img" />
+                            </div>
                             <div className="thumbnail-container">
                                 {projects.map((proj, ind) => (
                                     <img
