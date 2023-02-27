@@ -22,5 +22,5 @@ export const projects = [
         image: "/images/HouseMarketplaceApp.png",
         description: "placeholder",
         link: "link placeholder"
-    }
+    },
 ]
