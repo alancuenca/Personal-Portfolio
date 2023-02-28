@@ -1,33 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import { VscAccount } from "react-icons/vsc";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import "./Header.css";
 
 function Header() {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => setIsVisible(true), 1000);
+    }, []);
+
+    useEffect(() => {
+        let prevScrollpos = window.pageYOffset;
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+            setIsVisible(prevScrollpos > currentScrollPos);
+            prevScrollpos = currentScrollPos;
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <header>
+        <header className={`header ${isVisible ? "header--visible" : ""}`}>
             <nav>
-                <div className="header-logo">
-                    <h1>
-                        <VscAccount />Personal Portfolio
-                    </h1>
-                </div>
                 <div className="header-links">
-                    <Link to="projects" smooth={true} duration={500}>
-                        Projects
-                    </Link>
-                    <Link to="technologies" smooth={true} duration={500}>
-                        Technologies
-                    </Link>
-                    <Link to="about" smooth={true} duration={500}>
-                        About
-                    </Link>
-                    <a href="https://github.com/alancuenca">
-                        <AiFillGithub />                    </a>
-                    <a href="https://linkedin.com/in/alancuencasalmeron">
-                        <AiFillLinkedin />
-                    </a>
+                    <div className="component-links">
+                        <Link to="about" smooth={true} duration={500}>
+                            About
+                        </Link>
+                        <Link to="projects" smooth={true} duration={500}>
+                            Projects
+                        </Link>
+                        <Link to="technologies" smooth={true} duration={500}>
+                            Technologies
+                        </Link>
+                    </div>
+                    <div className="social-media-links">
+                        <a href="https://github.com/alancuenca">
+                            <AiFillGithub />
+                        </a>
+                        <a href="https://linkedin.com/in/alancuencasalmeron">
+                            <AiFillLinkedin />
+                        </a>
+                    </div>
                 </div>
             </nav>
         </header>

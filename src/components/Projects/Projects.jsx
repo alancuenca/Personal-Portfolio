@@ -26,17 +26,16 @@ function Projects() {
                         <div
                             key={index}
                             className={`project-slide ${index === currentProject ? "active" : ""} ${direction}`}
-                            onAnimationEnd={() => setDirection(null)}
                         >
                             <h3>{project.title}</h3>
-                    <button className="prev-arrow" onClick={prevProject} disabled={currentProject === 0}>
-                        <IoIosArrowBack />
-                    </button>
-                    <button className="next-arrow" onClick={nextProject} disabled={currentProject === projects.length - 1}>
-                        <IoIosArrowForward />
+                            <button className="prev-arrow" onClick={prevProject} disabled={currentProject === 0}>
+                                <IoIosArrowBack />
+                            </button>
+                            <button className="next-arrow" onClick={nextProject} disabled={currentProject === projects.length - 1}>
+                                <IoIosArrowForward />
                             </button>
                             <div className="main-img-container">
-                                <img src={project.image} alt={project.title} className="main-img" />
+                                <img src={project.image} alt={project.title} className={`main-img`} />
                             </div>
                             <div className="thumbnail-container">
                                 {projects.map((proj, ind) => (

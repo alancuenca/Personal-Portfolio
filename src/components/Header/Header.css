@@ -1,10 +1,58 @@
+@media screen and (max-width: 767px) {
+    .component-links{
+        margin-left: 5vw;
+        font-weight: 300;
+    }
+    .header-links a {
+        margin-right: 3vw;
+    }
+    .social-media-links {
+        font-size: 2em;
+        margin-top: .5vh;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .header-links a{
+        font-size: 1.5em;
+        margin: 1em;
+    }
+
+    .social-media-links {
+        font-size: 1.7em;
+        margin: 1vh 0 1vh 0;
+    }
+}
+
 .header-links {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(254, 254, 254);
+    font-family: 'Staatliches', cursive;
 }
 
-.header-links a {
-    margin-left: 10px;
-    margin-right: 10px;
+.header-links a:hover {
+    cursor: pointer;
+    color: darkgrey;
+    transition: color 0.3s ease-in-out;
+}
+
+.header {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: top .4s ease-in-out;
+}
+
+.header--visible {
+    top: 0;
+    transition: top .4s ease-in-out;
+}
+
+
+.component-links a:hover {
+
 }
