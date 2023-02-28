@@ -36,7 +36,13 @@ function Projects() {
                             </button>
                             <div className="main-img-container">
                                 <img src={project.image} alt={project.title} className={`main-img`} />
+                                <div className="project-info">
+                                    <p>{project.description}</p>
+                                    <a href={project.link}>Link</a>
+                                    <a href={project.github}>Github</a>
+                                </div>
                             </div>
+
                             <div className="thumbnail-container">
                                 {projects.map((proj, ind) => (
                                     <img
