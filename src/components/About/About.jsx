@@ -16,7 +16,7 @@ function About() {
                 ))}
                 <div className="about-paragraphs">
                     <p>
-                        Located in the Central Coast of California. Full-stack web developer with over 2 years of development experience. Specializing in Javascript and adept in utilizing cutting-edge technologies such as React.JS, CSS frameworks and Node.JS to bring web designs to life. Committed to staying current with industry trends and continuously improving my skills.
+                        Located in the Central Coast of California. Full-stack web developer with over 2 years of development experience. Specialist in Javascript and adept in utilizing cutting-edge technologies such as React.JS, CSS frameworks and Node.JS to bring web designs to life. Committed to staying current with industry trends and continuously improving my skills.
                     </p>
                     <p>
                         Honed soft skills with over 10 years of professional experience in management and education. Personal development and growth within these fields have enhanced my performance as a team member and focus towards contribution to overall operational success.

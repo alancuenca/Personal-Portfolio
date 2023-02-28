@@ -11,6 +11,17 @@
         margin-left: 0;
         margin-bottom: 1rem;
     }
+
+    .about-image-container {
+        width: 12rem;
+        height: 12rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .about-paragraphs {
+        font-family: 'Source Sans Pro', sans-serif;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -25,20 +36,24 @@
     .about-image-container {
         float: left;
     }
+
+    .about-image-container {
+        width: 17rem;
+        height: 17rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .about-paragraphs {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 600;
+        font-size: large;
+    }
 }
 
 .about-header {
     text-align: center;
     margin: 16vh 0 6vh 0;
-}
-
-
-
-.about-image-container {
-    width: 12rem;
-    height: 12rem;
-    border-radius: 50%;
-    overflow: hidden;
 }
 
 .about-image {
@@ -48,7 +63,7 @@
 }
 
 .about-paragraphs {
-    max-width: 50rem;
+    max-width: 40rem;
     margin: 0;
     padding: 0 1rem;
 }

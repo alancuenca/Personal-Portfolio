@@ -7,11 +7,11 @@ import About from './components/About/About';
 function App() {
   return (
     <div className="App">
+      <Header />
       <header className="App-header">
         <h1>Alan Cuenca</h1>
         <h2>Web Developer</h2>
       </header>
-      <Header />
       <About />
       <Projects />
       <Footer />
