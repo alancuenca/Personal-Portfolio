@@ -26,13 +26,13 @@ function Header() {
             <nav>
                 <div className="header-links">
                     <div className="component-links">
-                        <Link to="about" smooth={true} duration={500}>
+                        <Link id="Link" to="about" smooth={true} duration={500}>
                             About
                         </Link>
-                        <Link to="projects" smooth={true} duration={500}>
+                        <Link id="Link" to="projects" smooth={true} duration={500}>
                             Projects
                         </Link>
-                        <Link to="technologies" smooth={true} duration={500}>
+                        <Link id="Link" to="technologies" smooth={true} duration={500}>
                             Technologies
                         </Link>
                     </div>
