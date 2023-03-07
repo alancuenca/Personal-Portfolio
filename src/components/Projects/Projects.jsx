@@ -19,7 +19,7 @@ function Projects() {
 
     return (
         <section id="projects">
-            <h2>Projects</h2>
+            <h2 className="projects-header">Projects</h2>
             <div className="projects-container">
                 <div className="project-slideshow">
                     {projects.map((project, index) => (
@@ -28,12 +28,14 @@ function Projects() {
                             className={`project-slide ${index === currentProject ? "active" : ""} ${direction}`}
                         >
                             <h3>{project.title}</h3>
-                            <button className="prev-arrow" onClick={prevProject} disabled={currentProject === 0}>
+                            <button className={`prev-arrow ${currentProject === 0 ? "disable" : ""}`} onClick={prevProject} disabled={currentProject === 0}>
                                 <IoIosArrowBack />
                             </button>
-                            <button className="next-arrow" onClick={nextProject} disabled={currentProject === projects.length - 1}>
+                            <button className={`next-arrow ${currentProject === projects.length - 1 ? "disable" : ""}`} onClick={nextProject} disabled={currentProject === projects.length - 1}>
                                 <IoIosArrowForward />
                             </button>
+
+
                             <div className="main-img-container">
                                 <img src={project.image} alt={project.title} className={`main-img`} />
                                 <div className="project-info">

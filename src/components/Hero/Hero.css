@@ -1,0 +1,94 @@
+.hero-wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+.hero-header {
+    background: linear-gradient(to bottom, #4E4F50, #000000);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: inline-start;
+    justify-content: center;
+    color: #E2DED0;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #E2DED0, #4E4F50), url(../../../public/images/Background.jpeg);
+    background-color: #647C90;
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100vw;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #fName,
+    #lName {
+        font-size: 35vw;
+        margin: 0 0 0 .5vmin;
+    }
+
+    #lName {
+        margin-top: -40px;
+    }
+
+    #title {
+        font-size: 10vw;
+        margin-left: 14vmin;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    #fName,
+    #lName {
+        font-size: 30vmin;
+        margin-left: 29vmax;
+        margin-top: 0;
+    }
+
+    #lName {
+        margin-top: -5vw;
+    }
+
+    #title {
+        font-size: 10vmin;
+        margin-top: -30px;
+        margin-left: 30vmax;
+    }
+}
+
+@media only screen and (min-height: 1200px) {
+
+    #fName,
+    #lName {
+        margin-left: 5vmin;
+        margin-bottom: 0;
+    }
+
+    #title {
+        margin-left: 10vmin
+    }
+}
+
+#fName,
+#lName {
+    font-family: 'Anton', sans-serif;
+    background: linear-gradient(to right, #E2DED0, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(-1px -1px .15rem #ffffff91)
+}
+
+#title {
+    background: linear-gradient(to right, #E2DED0, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(-1px -1px .25rem #ffffff91)
+}

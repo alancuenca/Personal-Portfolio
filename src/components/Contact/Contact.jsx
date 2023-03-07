@@ -49,7 +49,7 @@ function Contact() {
                         <IoMdClose className="IoMdClose" onClick={toggleOpen} />
                     </>
                 ) : (
-                    <div className="bg-white">
+                    <div className="bg-white text-center">
                         <IoMdClose className="IoMdClose" data-bs-dismiss="modal" onClick={toggleOpen} />
                         <p className="h4 mb-4">Let's connect.</p>
                         <IoMdMailOpen className="IoMdMailOpen" />
@@ -60,7 +60,6 @@ function Contact() {
                                     id="subject"
                                     type="text"
                                     className="form-control-lg mb-4"
-                                    defaultValue="Response to personal portfolio"
                                     placeholder="Subject"
                                     onChange={(event) => setSubject(event.target.value)}
                                 />
