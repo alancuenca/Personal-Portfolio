@@ -1,0 +1,46 @@
+#technologies {
+    flex-grow: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    color: #E2DED0;
+    text-align: center;
+}
+
+.technologies-header {
+    margin: 16vh 0 6vh 0;
+    font-family: 'Anton', sans-serif;
+    background: linear-gradient(to right, #E2DED0, #746C70);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (min-width: 767px) {
+
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #technologies {
+        margin: 4em;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-gap: 2rem;
+        overflow-y: scroll;
+    }
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+}

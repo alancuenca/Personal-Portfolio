@@ -6,6 +6,7 @@
 
     .header-links a {
         margin-right: 3vw;
+        color: #647C90;
     }
 
     .social-media-links {
@@ -18,13 +19,15 @@
     .header-links a {
         font-size: 1.5em;
         margin: 1em;
+        color: #647C90;
     }
 
     .social-media-links {
         font-size: 1.7em;
         margin: 1vh 0 1vh 2vw;
     }
-    .social-media-links a:last-child{
+
+    .social-media-links a:last-child {
         margin-left: -1vw
     }
 }
@@ -35,9 +38,11 @@
     justify-content: center;
     background-color: rgb(254, 254, 254);
     font-family: 'Staatliches', cursive;
+    color: #647C90;
 }
 
-.header-links a:hover, #Link:hover {
+.header-links a:hover,
+#Link:hover {
     cursor: pointer;
     color: #ccc;
     transition: color 0.3s ease-in-out;
@@ -49,10 +54,10 @@
     left: 0;
     width: 100%;
     z-index: 100;
-    transition: top .4s ease-in-out;
+    transition: all 5s ease-in-out;
 }
 
 .header--visible {
     top: 0;
-    transition: top .4s ease-in-out;
+    transition: all .4s ease-in-out;
 }
