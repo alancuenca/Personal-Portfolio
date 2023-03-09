@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     padding-top: 1vmax;
-    overflow: auto;
+    overflow: visible;
     color: #E2DED0;
     text-align: center;
 }
@@ -105,6 +105,9 @@
 }
 
 .project-info {
+    font-family: anton;
+    font-size: 1rem;
+    color: #FFD369;
     width: 100%;
     height: 100%;
     display: none;
@@ -115,22 +118,31 @@
     z-index: 2;
 }
 
+h3{
+    color: #FFD369;
+    filter: drop-shadow(0px 0px 1px #222831);
+}
+
 .main-img-container:hover .project-info {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #222831ec;
 }
 
 .project-info p {
     color: #fff;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin: 2rem;
 }
 
 .project-info a {
     color: #fff;
     text-decoration: underline;
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
+}
+
+.project-info .github{
+    font-size: 3rem;
 }
 
 .project-info a:hover {
@@ -144,7 +156,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-height: max-content;
+    max-height: 190px;
     margin-bottom: 20px;
     overflow: hidden;
     background-color: #393E46;
@@ -153,13 +165,14 @@
 
 .thumbnail {
     position: static;
-    width: 15%;
-    height: auto;
+    max-width: 100px;
+    max-height: 180px;
     margin-right: 10px;
     border: 2px solid white;
     opacity: 0.5;
     cursor: pointer;
     transition: opacity 1s ease-in-out;
+    overflow: auto;
 }
 
 .thumbnail:hover {

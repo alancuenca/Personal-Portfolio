@@ -1,31 +1,27 @@
 export const projects = [
     {
         title: "House Marketplace",
-        image: "/images/HouseMarketplaceApp.png",
-        description: "placeholder",
-        link: "link placeholder",
-        github: "github placeholder"
+        image: "/images/house-market.png",
+        description: "This marketplace app allows users to list living spaces for sale / rent. Features gps functionality to view the location of the space.",
+        technologies: "React.js, Javascript, Bootstrap, Leaflet",
+        link: "https://house-marketplace-bu5803u52-alancuenca.vercel.app/",
+        github: "https://github.com/alancuenca/house-marketplace-app"
     },
     {
-        title: "2",
-        image: "/images/Nier.jpg",
-        description: "placeholder",
-        link: "link placeholder",
-        github: "github placeholder"
+        title: "Forkify App",
+        image: "/images/Forkify.png",
+        description: "Recipe app where a user can upload their own recipes.",
+        technologies: "Javascript, CSS, HTML",
+        link: "https://forkify-alan-cuenca.netlify.app/#5ed6604591c37cdc054bcb34",
+        github: "https://github.com/alancuenca/complete-javascript-course/tree/master/18-forkify/final"
     },
     {
-        title: "3",
-        image: "/images/HouseMarketplaceApp.png",
-        description: "placeholder",
-        link: "link placeholder",
-        github: "github placeholder"
-    },
-    {
-        title: "4",
-        image: "/images/HouseMarketplaceApp.png",
-        description: "placeholder",
-        link: "link placeholder",
-        github: "github placeholder"
+        title: "Personal Portfolio",
+        image: "/images/personal-portfolio.png",
+        description: "My single page application personal portfolio.",
+        link: "https://www.linkedin.com/in/alancuencasalmeron/",
+        technologies: "React.js, Bootstrap, CSS, Framer-motion",
+        github: "https://github.com/alancuenca/Personal-Portfolio"
     },
 ]
 
@@ -38,12 +34,12 @@ export const technologies = [
     {
         icon: "BiData",
         group: "Back-end Development",
-        tech: ["Node.JS", "MongoDB", "Express", "SQL", "Postgres", "Stripe"]
+        tech: ["Node.JS", "MongoDB", "Express", "SQL", "Postgres", "Google Firebase"]
     },
     {
         icon: "BiCodeCurly",
         group: "Development Tools",
-        tech: ["VS Code", "Github", "Postman", "Postico", "Google Firebase"]
+        tech: ["VS Code", "Github", "Postman", "Postico", "Stripe"]
     }
 ]
 
@@ -54,14 +50,14 @@ export const timeline = [
     },
     {
         year: 2021,
-        content: "Enrolled in Cal Poly Fullstack bootcamp"
+        content: "Enrolled in Cal Poly Fullstack bootcamp."
     },
     {
         year: 2022,
-        content: "Gained agile dev experience in my first internship"
+        content: "Gained agile dev experience in my first internship."
     },
     {
         year: 2023,
-        content: "Seeking the big break in web development."
+        content: "In search of a career in web development."
     }
 ]
