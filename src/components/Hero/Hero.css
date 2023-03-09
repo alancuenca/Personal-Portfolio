@@ -24,7 +24,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-
     #fName,
     #lName {
         font-size: 35vw;
@@ -52,7 +51,7 @@
     }
 
     #lName {
-        margin-top: -5vw;
+        margin-top: -4vw;
     }
 
     #title {
@@ -66,8 +65,12 @@
 
     #fName,
     #lName {
-        margin-left: 5vmin;
+        margin-left: 2vmax;
         margin-bottom: 0;
+    }
+
+    #lName{
+        margin-top: -3rem;
     }
 
     #title {

@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { IoIosMail, IoMdMailOpen, IoMdClose } from "react-icons/io"
+import { IoIosMail, IoMdClose } from "react-icons/io"
+import { BsFillTelephoneOutboundFill } from "react-icons/bs"
+import { MdContacts } from "react-icons/md"
 import "./Contact.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import EmailForm from "./EmailForm";
+import {saveContact} from "./SaveContact";
 
 function Contact() {
     const [isOpen, setIsOpen] = useState(false);
     const [isSent, setIsSent] = useState(false);
     const [message, setMessage] = useState("");
     const [subject, setSubject] = useState("");
+    const [isVisible, setIsVisible] = useState(false);
+
+    const ref = useRef(null);
 
     const toggleOpen = () => {
         setIsOpen(!isOpen);
@@ -25,65 +32,88 @@ function Contact() {
         setSubject("");
     };
 
+    useEffect(() => {
+        const node = ref.current;
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting);
+            },
+            { threshold: 0.5 }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (node) {
+                observer.unobserve(node);
+            }
+        };
+    }, []);
 
     return (
-        <>
+        <div id="contact">
             <motion.div
                 className="email-widget"
-                animate={{ opacity: isOpen ? 0 : 1 }}
+                animate={{ opacity: isVisible ? 0 : 1 }}
                 onClick={toggleOpen}
             >
                 <IoIosMail className="IoIosMail" />
             </motion.div>
-            <motion.div
-                className={isOpen ? "container open" : "container closed"}
-                animate={{
-                    opacity: isOpen ? 1 : 0,
-                    y: isOpen ? 0 : 50,
-                    scale: isOpen ? 1 : 1,
-                }}
-            >
-                {isSent ? (
-                    <>
-                        <p className="thank-you-message">Thank you for your message!</p>
-                        <IoMdClose className="IoMdClose" onClick={toggleOpen} />
-                    </>
-                ) : (
-                    <div className="bg-white text-center">
-                        <IoMdClose className="IoMdClose" data-bs-dismiss="modal" onClick={toggleOpen} />
-                        <p className="h4 mb-4">Let's connect.</p>
-                        <IoMdMailOpen className="IoMdMailOpen" />
-                        <div className="text-center bg-white border border-lite p-5">
-                            <div className="form-group">
-                                <input
-                                    value={subject}
-                                    id="subject"
-                                    type="text"
-                                    className="form-control-lg mb-4"
-                                    placeholder="Subject"
-                                    onChange={(event) => setSubject(event.target.value)}
-                                />
-                            </div>
-
-                            <div className="form-group">
-                                <textarea
-                                    value={message}
-                                    id="message"
-                                    type="text"
-                                    className="form-control-lg mb-4"
-                                    rows="4"
-                                    placeholder="Message"
-                                    onChange={(event) => setMessage(event.target.value)}
-                                />
-                            </div>
-                            <button type="submit" className="btn btn-primary" onClick={handleSend}>
-                                Send
-                            </button>
-                        </div>
-                    </div>
-                )}
-            </motion.div>
-        </>
+            <div ref={ref}>
+                <motion.div
+                    className={isOpen ? "container open" : "container closed"}
+                    animate={{
+                        opacity: isOpen ? 1 : 0,
+                        y: isOpen ? 0 : 50,
+                        scale: isOpen ? 1 : 1,
+                    }}
+                >
+                    {isSent ? (
+                        <>
+                            <p className="thank-you-message">Thank you for your message!</p>
+                            <IoMdClose className="IoMdClose" onClick={toggleOpen} />
+                        </>
+                    ) : (
+                        <>
+                            <IoMdClose className="IoMdClose" data-bs-dismiss="modal" onClick={toggleOpen} />
+                            <EmailForm
+                                subject={subject}
+                                setSubject={setSubject}
+                                message={message}
+                                setMessage={setMessage}
+                                handleSend={handleSend}
+                                toggleOpen={toggleOpen}
+                            />
+                        </>
+                    )}
+                </motion.div>
+            </div>
+            <div className="page-email-container">
+                <EmailForm
+                    subject={subject}
+                    setSubject={setSubject}
+                    message={message}
+                    setMessage={setMessage}
+                    handleSend={handleSend}
+                    isOpen={isOpen}
+                    toggleOpen={toggleOpen}
+                />
+            </div>
+            <div className="add-contact-container" onClick={saveContact}>
+                <div className="add-contact-content">
+                <MdContacts />
+                Save My Contact Info
+                </div>
+            </div>
+            <div>
+                <a href="tel:+18053548830" className="call">
+                    <BsFillTelephoneOutboundFill />
+                    (805) 354-8830
+                </a>
+            </div>
+        </div>
     );
 }
 

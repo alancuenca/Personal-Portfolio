@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa"
 import { projects } from "../../constants/constants";
 import "./Projects.css";
 
@@ -40,8 +41,14 @@ function Projects() {
                                 <img src={project.image} alt={project.title} className={`main-img`} />
                                 <div className="project-info">
                                     <p>{project.description}</p>
-                                    <a href={project.link}>Link</a>
-                                    <a href={project.github}>Github</a>
+                                    <h3>Technologies</h3>
+                                    <p>{project.technologies}</p>
+                                    <a href={project.link} rel="noreferrer" target="_blank">
+                                        <FaExternalLinkAlt />
+                                    </a>
+                                    <a href={project.github} className="github" rel="noreferrer" target="_blank">
+                                        <FaGithub />
+                                    </a>
                                 </div>
                             </div>
 
@@ -56,7 +63,6 @@ function Projects() {
                                     />
                                 ))}
                             </div>
-                            <p>{project.description}</p>
                         </div>
                     ))}
                 </div>

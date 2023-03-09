@@ -1,46 +1,95 @@
 #technologies {
-    flex-grow: 1;
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    padding-top: 1vmax;
+    overflow: visible;
     color: #E2DED0;
     text-align: center;
 }
 
 .technologies-header {
-    margin: 16vh 0 6vh 0;
+    margin: 5vmax 0 0 0;
     font-family: 'Anton', sans-serif;
+    font-size: 8vmax;
     background: linear-gradient(to right, #E2DED0, #746C70);
-    -webkit-background-clip: text;
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 @media screen and (min-width: 767px) {
-
-
     .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 2rem;
+    }
+
+    .list-group-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        margin-bottom: 0;
+        position: relative;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    #technologies .tab-container {
+        max-width: 800px;
+        margin: 0 auto;
+        border: 23px solid #222831;
+        filter: drop-shadow(-20px 20px 9px #222831);
+        border-radius: 15px;
+    }
+    #technologies{
+        min-height: 1300px;
     }
 }
 
 @media screen and (max-width: 767px) {
     #technologies {
         margin: 4em;
+        height: 130vmax;
     }
 
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(1, auto);
-        grid-gap: 2rem;
-        overflow-y: scroll;
+    #technologies .tab-container {
+        max-width: 300px;
+        border: 10px solid #222831;
+        border-radius: 6%;
+        filter: drop-shadow(-20px 20px 9px #222831);
     }
 }
 
 .grid-item {
     display: flex;
     flex-direction: column;
+}
+
+.nav {
+    justify-content: center;
+    align-items: center;
+    --bs-nav-link-color: #EEEEEE;
+    --bs-nav-link-hover-color: #FFD369;
+}
+
+.nav-tabs .nav-link.active {
+    --bs-nav-tabs-link-active-color: #222831;
+    border-bottom: none;
+    background-color: #393E46;
+    color: #EEEEEE;
+    border-color: #393E46;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+#technologies .tab-container {
+    background-color: #222831;
+}
+
+.nav-link.active,
+.list-group-item {
+    color: #EEEEEE;
+    background-color: #393E46;
 }

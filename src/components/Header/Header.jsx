@@ -11,12 +11,13 @@ function Header() {
     }, []);
 
     useEffect(() => {
-        let prevScrollpos = window.pageYOffset;
+        let prevScrollpos = window.scrollY;
         const handleScroll = () => {
-            const currentScrollPos = window.pageYOffset;
+            const currentScrollPos = window.scrollY;
             setIsVisible(prevScrollpos > currentScrollPos);
             prevScrollpos = currentScrollPos;
         };
+
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
@@ -33,7 +34,10 @@ function Header() {
                             Projects
                         </Link>
                         <Link id="Link" to="technologies" smooth={true} duration={500}>
-                            Technologies
+                            Tech
+                        </Link>
+                        <Link id="Link" to="contact" smooth={true} duration={500}>
+                            Contact
                         </Link>
                     </div>
                     <div className="social-media-links">
