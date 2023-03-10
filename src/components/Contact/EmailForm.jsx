@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoMdMailOpen } from "react-icons/io";
 
-function EmailForm({ handleSend, toggleOpen }) {
+function EmailForm({ handleSend }) {
     const [message, setMessage] = useState("");
     const [subject, setSubject] = useState("");
 

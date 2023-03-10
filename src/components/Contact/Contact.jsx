@@ -23,7 +23,7 @@ function Contact() {
     };
 
     const handleSend = () => {
-        let headline = document.getElementById("subject").value || "Response to personal portfolio";
+        let headline = subject || "Response to personal portfolio";
         let body = encodeURIComponent(message);
         let mailtoLink = `mailto:alan.r.cuenca@gmail.com?subject=${headline}&body=${body}`;
         window.open(mailtoLink, "_blank");
