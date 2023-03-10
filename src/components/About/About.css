@@ -1,5 +1,5 @@
 #about {
-    flex-grow: 2;
+    flex-grow: 1;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -28,15 +28,15 @@
     z-index: 2;
     justify-content: center;
     align-items: center;
-    height: 500px;
-    width: 60vmin;
+    /* height: 500px; */
+    /* width: 60vw; */
     margin-bottom: 20px;
     overflow: hidden;
     background-color: #393E46;
     filter: drop-shadow(-20px 20px 9px black)
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
     .about-container {
         text-align: start;
         display: flex;
@@ -48,18 +48,29 @@
         margin-right: 0;
         margin-left: 0;
         margin-bottom: 1rem;
-        width: 12rem;
-        height: 12rem;
+        width: 22em;
+        height: 22em;
         border-radius: 50%;
         overflow: hidden;
+        filter: drop-shadow(-1px 1px 0.5rem #E2DED0) drop-shadow(-1px -1px .2rem #EEEEEE);
     }
 
     .about-paragraphs {
         font-family: 'Source Sans Pro', sans-serif;
+        max-width: 100%;
+        margin: 1%;
+        padding: 0 5rem;
+        font-size: 3rem;
+    }
+    .resume-button{
+        margin: 20px;
+    }
+    #download{
+        font-size: 3rem;
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1001px) {
     .about-container {
         text-align: start;
         display: flex;
@@ -70,6 +81,7 @@
 
     .about-image-container {
         float: left;
+        filter: drop-shadow(-1px 1px 0.05rem #E2DED0) drop-shadow(-1px -1px .2rem #EEEEEE);
     }
 
     .about-image-container {
@@ -83,12 +95,14 @@
         font-family: 'Source Sans Pro', sans-serif;
         font-weight: 600;
         font-size: large;
+        max-width: 40rem;
+        margin: 0;
+        padding: 0 1rem;
     }
 }
 
 .about-image-container {
     z-index: 1;
-    filter: drop-shadow(-1px 1px 0.05rem #E2DED0) drop-shadow(-1px -1px .2rem #EEEEEE);
     background-image: linear-gradient(to bottom left, #222831, #393E46, #4E4F50, #647C90);
 }
 
@@ -98,8 +112,4 @@
     object-fit: cover;
 }
 
-.about-paragraphs {
-    max-width: 40rem;
-    margin: 0;
-    padding: 0 1rem;
-}
+.about-paragraphs {}

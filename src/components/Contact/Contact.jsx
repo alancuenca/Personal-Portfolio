@@ -90,6 +90,8 @@ function Contact() {
                     )}
                 </motion.div>
             </div>
+
+            <div className="contact-bottom">
             <div className="page-email-container">
                 <EmailForm
                     subject={subject}
@@ -112,6 +114,7 @@ function Contact() {
                     <BsFillTelephoneOutboundFill />
                     (805) 354-8830
                 </a>
+            </div>
             </div>
         </div>
     );

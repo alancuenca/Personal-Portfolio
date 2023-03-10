@@ -1,126 +1,10 @@
 #contact {
     flex-grow: 1;
     width: 100%;
-    max-height: 120vh;
-    overflow: auto;
+    max-height: 110vh;
     display: flex;
     flex-direction: column;
     align-content: center;
-}
-
-.email-widget {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #647c9062;
-    border: 1px solid #E2DED0;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    height: 60px;
-    width: 60px;
-    cursor: pointer;
-}
-
-.email-widget:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-    background-color: #E2DED0;
-}
-
-.IoMdClose {
-    position: absolute;
-    top: .5vh;
-    right: 1vh;
-    font-size: 3rem;
-    cursor: pointer;
-}
-
-.IoMdClose:hover {
-    color: red;
-    transition-duration: .5s;
-}
-
-.IoIosMail {
-    color: #ffffff;
-    font-size: 3rem;
-}
-
-.IoMdMailOpen {
-    color: #007bff;
-    font-size: 5rem;
-}
-
-@media screen and (min-width: 767px) {
-    .container.open {
-        position: absolute;
-        top: 20%;
-        left: 32%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%)
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .container {
-        top: 0.5%;
-        left: 0;
-    }
-}
-
-.container.open {
-    display: flex;
-    position: fixed;
-    max-width: 500px;
-    transform: translate(-50%, -50%);
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    z-index: 9998;
-    flex-direction: column;
-    align-items: center;
-
-
-}
-
-.container.closed {
-    display: none;
-}
-
-.container::after {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    z-index: -1;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.676);
-    background-color: white;
-}
-
-.container::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    backdrop-filter: blur(10px) brightness(80%) saturate(120%);
-    box-shadow: inset 0 0 0 100vmax rgba(255, 255, 255, 0);
-}
-
-.page-email-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .add-contact,
@@ -172,4 +56,204 @@ div.add-contact-content:hover,
 .text-decoration-none:hover {
     background-color: #0b4baa;
     color: #eeeeeed0;
+}
+
+.email-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #647c9062;
+    border: 1px solid #E2DED0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.email-widget:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    background-color: #E2DED0;
+}
+
+.IoMdClose {
+    position: absolute;
+    top: .5vh;
+    right: 1vh;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.IoMdClose:hover {
+    color: red;
+    transition-duration: .5s;
+}
+
+.IoIosMail {
+    color: #ffffff;
+}
+
+.IoMdMailOpen {
+    color: #007bff;
+}
+
+@media screen and (min-width: 1001px) {
+    .container.open {
+        display: flex;
+        position: fixed;
+        max-width: 500px;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 9998;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container.open {
+        top: 20%;
+        left: 32%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .email-widget {
+        height: 60px;
+        width: 60px;
+    }
+
+    .IoIosMail {
+        font-size: 3rem;
+    }
+
+    .IoMdMailOpen {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container.open {
+        top: 25%;
+        left: 25%;
+        /* width: 100vw; */
+    }
+
+    .page-email-container {
+        height: 100%;
+        padding-bottom: 75%;
+    }
+
+    .email-widget {
+        height: 120px;
+        width: 120px;
+    }
+
+    .IoIosMail {
+        font-size: 5rem;
+    }
+
+    .IoMdMailOpen {
+        font-size: 8rem;
+    }
+
+    .bg-white {
+        font-size: 5rem;
+        width: 600px;
+    }
+
+    #subject,
+    #message {
+        width: 460px;
+        font-size: 2rem;
+    }
+
+    p.mb-4 {
+        font-size: 3rem;
+    }
+
+    button.btn {
+        font-size: 2rem;
+    }
+
+    .container::after {
+        width: none;
+        height: 110%;
+    }
+
+    .container.open {
+        display: flex;
+        position: fixed;
+        width: 600px;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 9998;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container.open {
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .add-contact-content {
+        font-size: 3.8rem;
+        height: 250px;
+    }
+
+    .call{
+        font-size: 4rem;
+        height: 400px;
+        width: 100vw;
+    }
+
+    .contact-bottom{
+    }
+}
+
+
+
+.container.closed {
+    display: none;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    z-index: -1;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.676);
+    background-color: white;
+}
+
+.container::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    backdrop-filter: blur(10px) brightness(80%) saturate(120%);
+    box-shadow: inset 0 0 0 100vmax rgba(255, 255, 255, 0);
+}
+
+.page-email-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
