@@ -1,11 +1,11 @@
 #projects {
-    flex-grow: 2;
     display: flex;
     flex-direction: column;
     padding-top: 1vmax;
     overflow: visible;
     color: #E2DED0;
     text-align: center;
+    width: 100%;
 }
 
 .projects-header {
@@ -29,7 +29,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 800px;
     height: 100%;
     margin: 0 auto;
     position: relative;
@@ -60,26 +59,78 @@
     height: auto;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
     #projects {
-        height: 130vmax;
+        height: 2500px;
     }
 
     .project-slide img {
-        max-width: 280px;
+        max-width: 75%;
         overflow: hidden;
+    }
+
+    .main-img-container {
+        height: 50vmax;
+    }
+
+    .project-slideshow {
+        width: 95%;
+    }
+
+    .prev-arrow,
+    .next-arrow {
+        font-size: 8rem;
+    }
+
+    .project-info p {
+        font-size: 3rem;
+    }
+
+    .project-info a {
+        font-size: 4rem;
+    }
+
+    .project-info .github {
+        font-size: 5rem;
+    }
+
+    .project-info h3{
+        font-size: 4rem;
+    }
+
+    .project-title{
+        font-size: 4rem;
     }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 1001px) {
     #projects {
         min-height: 1300px;
     }
-}
 
-@media only screen and (min-height: 1200px) {
-    #projects {
-        max-height: 100vw;
+    .main-img-container {
+        height: 500px;
+    }
+
+    .project-slideshow {
+        max-width: 90vw;
+    }
+
+    .prev-arrow,
+    .next-arrow {
+        font-size: 5rem;
+    }
+
+    .project-info p {
+        font-size: 1.5rem;
+    }
+
+    .project-info a {
+        font-size: 2rem;
+    }
+
+    .project-info .github {
+        font-size: 3rem;
     }
 }
 
@@ -89,7 +140,6 @@
     z-index: 2;
     justify-content: center;
     align-items: center;
-    height: 500px;
     width: 100%;
     margin-bottom: 20px;
     overflow: hidden;
@@ -115,12 +165,13 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
 }
 
-h3{
+h3 {
     color: #FFD369;
     filter: drop-shadow(0px 0px 1px #222831);
+    font-size: 4rem;
 }
 
 .main-img-container:hover .project-info {
@@ -130,19 +181,13 @@ h3{
 
 .project-info p {
     color: #fff;
-    font-size: 1.2rem;
     margin: 2rem;
 }
 
 .project-info a {
     color: #fff;
     text-decoration: underline;
-    font-size: 2rem;
     margin-bottom: 0.5rem;
-}
-
-.project-info .github{
-    font-size: 3rem;
 }
 
 .project-info a:hover {
@@ -185,11 +230,11 @@ h3{
 }
 
 .prev-arrow {
-    left: .25vmax;
+    left: .25vw;
 }
 
 .next-arrow {
-    right: .25vmax;
+    right: .25vw;
 }
 
 .prev-arrow,
@@ -200,7 +245,6 @@ h3{
     border: none;
     background-color: transparent;
     color: #EEEEEE;
-    font-size: 4em;
     z-index: 3
 }
 

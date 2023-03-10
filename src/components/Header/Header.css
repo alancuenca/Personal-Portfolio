@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
     .component-links {
         margin-left: 5vw;
         font-weight: 300;
@@ -10,15 +10,15 @@
     }
 
     #Link{
-        font-size: 1.3em;
+        font-size: 2.7rem;
     }
     .social-media-links {
-        font-size: 2em;
+        font-size: 4em;
         margin-top: .5vh;
     }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 1001px) {
     .header-links a {
         font-size: 1.5em;
         margin: 1em;

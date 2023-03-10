@@ -1,5 +1,5 @@
 .hero-wrapper {
-    height: 100vh;
+    height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
@@ -20,10 +20,10 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    width: 100vw;
+    width: 100%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
     #fName,
     #lName {
         font-size: 35vw;
@@ -41,7 +41,7 @@
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1001px) {
 
     #fName,
     #lName {
@@ -61,7 +61,7 @@
     }
 }
 
-@media only screen and (min-height: 1200px) {
+/* @media only screen and (min-height: 1200px) {
 
     #fName,
     #lName {
@@ -76,7 +76,7 @@
     #title {
         margin-left: 10vmin
     }
-}
+} */
 
 #fName,
 #lName {

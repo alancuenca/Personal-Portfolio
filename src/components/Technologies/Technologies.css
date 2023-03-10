@@ -1,6 +1,7 @@
 #technologies {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding-top: 1vmax;
     overflow: visible;
     color: #E2DED0;
@@ -17,7 +18,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 1001px) {
     .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -46,17 +47,23 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
     #technologies {
-        margin: 4em;
-        height: 130vmax;
+        height: 2800px;
     }
 
     #technologies .tab-container {
-        max-width: 300px;
-        border: 10px solid #222831;
+        border: 20px solid #222831;
+        width: 90%;
         border-radius: 6%;
         filter: drop-shadow(-20px 20px 9px #222831);
+    }
+    .list-group-item{
+        font-size: 3rem;
+    }
+
+    .tab-container{
+        font-size: 3rem;
     }
 }
 

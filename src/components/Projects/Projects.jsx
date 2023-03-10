@@ -28,7 +28,7 @@ function Projects() {
                             key={index}
                             className={`project-slide ${index === currentProject ? "active" : ""} ${direction}`}
                         >
-                            <h3>{project.title}</h3>
+                            <h3 className="project-title">{project.title}</h3>
                             <button className={`prev-arrow ${currentProject === 0 ? "disable" : ""}`} onClick={prevProject} disabled={currentProject === 0}>
                                 <IoIosArrowBack />
                             </button>

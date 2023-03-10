@@ -26,7 +26,7 @@ function About() {
                         </p>
                     </div>
                 </div>
-                <a href="/documents/resume.pdf" download>
+                <a href="/documents/resume.pdf" download className="resume-button">
                     <button
                         className="btn btn-primary btn-lg"
                         id="download"
