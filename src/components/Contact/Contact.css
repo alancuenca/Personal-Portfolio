@@ -140,8 +140,7 @@ div.add-contact-content:hover,
 @media screen and (max-width: 1000px) {
     .container.open {
         top: 25%;
-        left: 25%;
-        /* width: 100vw; */
+        left: 20%;
     }
 
     .page-email-container {
@@ -150,16 +149,20 @@ div.add-contact-content:hover,
     }
 
     .email-widget {
-        height: 120px;
-        width: 120px;
+        height: 130px;
+        width: 130px;
     }
 
     .IoIosMail {
-        font-size: 5rem;
+        font-size: 6rem;
     }
 
     .IoMdMailOpen {
         font-size: 8rem;
+    }
+
+    .IoMdClose{
+        font-size: 3.5rem;
     }
 
     .bg-white {
@@ -215,6 +218,10 @@ div.add-contact-content:hover,
         font-size: 4rem;
         height: 400px;
         width: 100vw;
+    }
+
+    .container::after{
+        box-sizing: none;
     }
 }
 
