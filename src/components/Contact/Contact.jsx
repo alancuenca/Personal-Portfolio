@@ -24,8 +24,7 @@ function Contact() {
 
     const handleSend = () => {
         let headline = subject || "Response to personal portfolio";
-        let body = encodeURIComponent(message);
-        let mailtoLink = `mailto:alan.r.cuenca@gmail.com?subject=${headline}&body=${body}`;
+        let mailtoLink = `mailto:alan.r.cuenca@gmail.com?subject=${headline}&body=${message}`;
         window.open(mailtoLink, "_blank");
         setIsSent(true);
         setMessage("");
