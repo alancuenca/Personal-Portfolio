@@ -19,17 +19,22 @@ function Hero() {
     return (
         <AnimatePresence>
             <div className="hero-wrapper">
-
-            <header className="hero-header">
-                <motion.div initial="initial" animate="animate" >
-                    <motion.h1 variants={firstNameVariants} id="fName">ALAN</motion.h1>
-                    <motion.h1 variants={lastNameVariants} id="lName">CUENCA</motion.h1>
-                    <motion.h2 variants={h2Variants} id="title">professional</motion.h2>
-                    <motion.h2 variants={h2Variants} id="title">web developer</motion.h2>
-
-                </motion.div>
+                <header className="hero-header">
+                    <motion.div initial="initial" animate="animate" >
+                        <motion.h1 variants={firstNameVariants} id="fName">
+                            ALAN
+                        </motion.h1>
+                        <motion.h1 variants={lastNameVariants} id="lName">
+                            CUENCA
+                        </motion.h1>
+                        <motion.h2 variants={h2Variants} id="title">
+                            professional
+                        </motion.h2>
+                        <motion.h2 variants={h2Variants} id="title">
+                            web developer
+                        </motion.h2>
+                    </motion.div>
                 </header>
-                
             </div>
         </AnimatePresence>
     );
