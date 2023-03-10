@@ -6,7 +6,7 @@ import { MdContacts } from "react-icons/md"
 import "./Contact.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import EmailForm from "./EmailForm";
-import {saveContact} from "./SaveContact";
+import { saveContact } from "./SaveContact";
 
 function Contact() {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,14 +22,16 @@ function Contact() {
         setIsSent(false);
     };
 
-    const handleSend = () => {
-        let headline = subject || "Response to personal portfolio";
-        let mailtoLink = `mailto:alan.r.cuenca@gmail.com?subject=${headline}&body=${message}`;
-        window.open(mailtoLink, "_blank");
+    const handleSend = (subject, message) => {
+        let headline = encodeURIComponent(subject) || "Response to personal portfolio";
+        let body = encodeURIComponent(message);
+        let mailtoLink = `mailto:alan.r.cuenca@gmail.com?subject=${headline}&body=${body}`;
+        window.location.href = mailtoLink;
         setIsSent(true);
         setMessage("");
         setSubject("");
     };
+
 
     useEffect(() => {
         const node = ref.current;
@@ -91,29 +93,28 @@ function Contact() {
             </div>
 
             <div className="contact-bottom">
-            <div className="page-email-container">
-                <EmailForm
-                    subject={subject}
-                    setSubject={setSubject}
-                    message={message}
-                    setMessage={setMessage}
-                    handleSend={handleSend}
-                    isOpen={isOpen}
-                    toggleOpen={toggleOpen}
-                />
-            </div>
-            <div className="add-contact-container" onClick={saveContact}>
-                <div className="add-contact-content">
-                <MdContacts />
-                Save My Contact Info
+                <div className="page-email-container">
+                    <EmailForm
+                        subject={subject}
+                        setSubject={setSubject}
+                        message={message}
+                        setMessage={setMessage}
+                        handleSend={handleSend}
+                        toggleOpen={toggleOpen}
+                    />
                 </div>
-            </div>
-            <div>
-                <a href="tel:+18053548830" className="call">
-                    <BsFillTelephoneOutboundFill />
-                    (805) 354-8830
-                </a>
-            </div>
+                <div className="add-contact-container" onClick={saveContact}>
+                    <div className="add-contact-content">
+                        <MdContacts />
+                        Save My Contact Info
+                    </div>
+                </div>
+                <div>
+                    <a href="tel:+18053548830" className="call">
+                        <BsFillTelephoneOutboundFill />
+                        (805) 354-8830
+                    </a>
+                </div>
             </div>
         </div>
     );

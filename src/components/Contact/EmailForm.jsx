@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { IoMdMailOpen } from "react-icons/io";
 
-function EmailForm({ handleSend }) {
-    const [message, setMessage] = useState("");
-    const [subject, setSubject] = useState("");
+function EmailForm({ handleSend, subject, setSubject, message, setMessage }) {
+    const handleButtonClick = () => {
+        handleSend(subject, message);
+    };
 
     return (
         <div className="bg-white text-center">
@@ -31,12 +32,13 @@ function EmailForm({ handleSend }) {
                         onChange={(event) => setMessage(event.target.value)}
                     />
                 </div>
-                <button type="submit" className="btn btn-primary" onClick={handleSend}>
+                <button type="submit" className="btn btn-primary" onClick={handleButtonClick}>
                     Send
                 </button>
             </div>
         </div>
     );
 }
+
 
 export default EmailForm;
