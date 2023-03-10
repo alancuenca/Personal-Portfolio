@@ -5,29 +5,12 @@
     perspective: 10px;
 }
 
-.hero-header {
-    background: linear-gradient(to bottom, #4E4F50, #000000);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: inline-start;
-    justify-content: center;
-    color: #E2DED0;
-    overflow: hidden;
-    background-image: linear-gradient(to bottom, #E2DED0, #4E4F50), url(../../../public/images/Background.jpeg);
-    background-color: #647C90;
-    background-blend-mode: soft-light;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    width: 100%;
-}
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
     #fName,
     #lName {
-        font-size: 35vw;
-        margin: 0 0 0 .5vmin;
+        font-size: 34vw;
+        margin: 5% 0 0 .5vmin;
     }
 
     #lName {
@@ -41,17 +24,17 @@
     }
 }
 
-@media only screen and (min-width: 1001px) {
+@media only screen and (min-width: 1025px) {
 
     #fName,
     #lName {
         font-size: 30vmin;
-        margin-left: 29vmax;
+        margin-left: 24vmax;
         margin-top: 0;
     }
 
     #lName {
-        margin-top: -4vw;
+        margin-top: -3vmax;
     }
 
     #title {
@@ -61,11 +44,11 @@
     }
 }
 
-/* @media only screen and (min-height: 1200px) {
+@media only screen and (min-height: 1201px) {
 
     #fName,
     #lName {
-        margin-left: 2vmax;
+        margin-left: .5vw;
         margin-bottom: 0;
     }
 
@@ -76,7 +59,7 @@
     #title {
         margin-left: 10vmin
     }
-} */
+}
 
 #fName,
 #lName {
@@ -94,4 +77,22 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(-1px -1px .25rem #ffffff91)
+}
+.hero-header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: inline-start;
+    justify-content: center;
+    color: #E2DED0;
+    background-image: linear-gradient(to bottom, #E2DED0, #4E4F50), url(../../../public/images/Background.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #647C90;
+    background-blend-mode: soft-light;
+    /* position: relative; */
+    /* width: 100%; */
+    perspective: 10px;
+    overflow: hidden;
 }
