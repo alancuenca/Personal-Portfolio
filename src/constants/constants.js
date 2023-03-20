@@ -23,23 +23,31 @@ export const projects = [
         technologies: "React.js, Bootstrap, CSS, Framer-motion",
         github: "https://github.com/alancuenca/Personal-Portfolio"
     },
+    {
+        title: "Restaurant App",
+        image: "/images/restaurant-app.png",
+        description: "personal 'One Week website creating challenge'",
+        link: "https://restaurant-app-eta.vercel.app/",
+        technologies: "React.js, CSS",
+        github: "https://github.com/alancuenca/restaurant-app"
+    }
 ]
 
 export const technologies = [
     {
         icon: "FaReact",
         group: "Front-end Development",
-        tech: ["React.JS", "JavaScript", "CSS3", "HTML5", "Tailwind CSS", "Bootstrap", "Framer", "Redux", "Axios", "Adobe Illustrator"]
+        tech: [ "React.JS", "JavaScript", "CSS3", "HTML5", "Tailwind CSS", "Bootstrap", "Framer", "Redux", "Axios", "Adobe Illustrator" ]
     },
     {
         icon: "BiData",
         group: "Back-end Development",
-        tech: ["Node.JS", "MongoDB", "Express", "SQL", "Postgres", "Google Firebase"]
+        tech: [ "Node.JS", "MongoDB", "Express", "SQL", "Postgres", "Google Firebase" ]
     },
     {
         icon: "BiCodeCurly",
         group: "Development Tools",
-        tech: ["VS Code", "Github", "Postman", "Postico", "Stripe"]
+        tech: [ "VS Code", "Github", "Postman", "Postico", "Stripe" ]
     }
 ]
 
